@@ -720,7 +720,7 @@
       <span class="section-label">05 — LET'S WORK TOGETHER</span>
       <div class="contact-heading">GET IN<br>TOUCH<span>.</span></div>
       <div style="margin-top:1.5rem; display:flex; gap:1rem; flex-wrap:wrap;">
-        <a href="/cdn-cgi/l/email-protection#a8c486dbc7c9dacddbcccdcadac1dcc7dcc9dec9dacddbe8dbdcddcccdc6dc86c0c9c686c6c4" class="btn btn-primary">Send a Message</a>
+        <a id="cSend" href="#" class="btn btn-primary">Send a Message</a>
         <button onclick="downloadCV()" class="btn btn-ghost">Download CV</button>
         <button onclick="openGallery()" class="btn btn-ghost">Project Photos</button>
       </div>
@@ -728,7 +728,7 @@
     <div class="contact-details fade-up">
       <div class="contact-row">
         <label>EMAIL</label>
-        <a href="/cdn-cgi/l/email-protection#ec80c29f838d9e899f88898e9e859883988d9a8d9e899fac9f989988898298c2848d82c28280"><span class="__cf_email__" data-cfemail="1f73316c707e6d7a6c7b7a7d6d766b706b7e697e6d7a6c5f6c6b6a7b7a716b31777e71317173">[email&#160;protected]</span></a>
+        <a id="cEmail" href="#">Email me</a>
       </div>
       <div class="contact-row">
         <label>LINKEDIN</label>
@@ -866,7 +866,7 @@
 
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   var cvURL = null;
   function ensureCV() {
     if (!cvURL) {
@@ -942,6 +942,12 @@
     var img = card.querySelector('img'), lbl = card.querySelector('.gallery-card-label');
     if (img && lbl && !img.alt) img.alt = lbl.textContent.trim();
   });
+
+  (function(){
+    var u = 'l.soaresdebritotavares', d = 'student.han.nl', a = u + '@' + d;
+    var e = document.getElementById('cEmail'); if (e) { e.href = 'mailto:' + a; e.textContent = a; }
+    var s = document.getElementById('cSend'); if (s) { s.href = 'mailto:' + a; }
+  })();
 </script>
 </body>
 </html>
