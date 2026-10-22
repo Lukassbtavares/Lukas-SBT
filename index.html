@@ -207,6 +207,39 @@
   }
   .tag.accent { border-color: var(--accent); color: var(--accent); }
 
+  /* INTERNSHIP */
+  #internship { max-width: 1100px; }
+  .internship-card {
+    margin-top: 3rem; padding: 2.5rem;
+    background: var(--surface); border: 1px solid var(--border);
+  }
+  .internship-header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    flex-wrap: wrap; gap: 1rem; margin-bottom: 1.75rem;
+    padding-bottom: 1.5rem; border-bottom: 1px solid var(--border);
+  }
+  .internship-role {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+    font-size: 1.6rem; margin-bottom: 0.3rem;
+  }
+  .internship-org {
+    font-family: 'Space Mono', monospace; font-size: 0.7rem;
+    color: var(--accent); letter-spacing: 0.06em;
+  }
+  .internship-period {
+    font-family: 'Space Mono', monospace; font-size: 0.65rem;
+    color: var(--dim); letter-spacing: 0.08em; white-space: nowrap;
+  }
+  .internship-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
+  .internship-list li {
+    font-size: 0.92rem; color: #c8c5bf; padding-left: 1.25rem; position: relative;
+  }
+  .internship-list li::before {
+    content: ''; position: absolute; left: 0; top: 0.55em;
+    width: 6px; height: 6px; background: var(--accent);
+  }
+  .internship-tags { margin-top: 1.75rem; }
+
   /* PROJECTS */
   #projects { max-width: 1100px; }
   .project-list { margin-top: 3rem; }
@@ -444,6 +477,7 @@
     .project-thumb { width: 90px; height: 90px; }
     section { padding: 5rem 1.5rem; }
     .about-grid, .contact-inner, .timeline-item { grid-template-columns: 1fr; gap: 2rem; }
+    .internship-card { padding: 1.5rem; }
     .skills-grid { grid-template-columns: 1fr 1fr; }
     .hero-name { font-size: clamp(4rem, 18vw, 8rem); }
     #contact { padding: 5rem 1.5rem; }
@@ -461,6 +495,7 @@
   <a class="nav-logo" href="#">LST.</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
+    <li><a href="#internship">Internship</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#background">Background</a></li>
@@ -541,9 +576,42 @@
 
 <hr class="divider">
 
+<!-- INTERNSHIP -->
+<section id="internship">
+  <span class="section-label">02 — CURRENT ROLE</span>
+  <h2>INTERNSHIP</h2>
+  <div class="internship-card fade-up">
+    <div class="internship-header">
+      <div>
+        <div class="internship-role">R&amp;D Mechanical Engineering Intern</div>
+        <div class="internship-org">INNOFLEX B.V. — BRAINPORT INDUSTRIES CAMPUS, EINDHOVEN, NL</div>
+      </div>
+      <div class="internship-period">SEP 2026 — PRESENT &nbsp;·&nbsp; 6 MONTHS</div>
+    </div>
+    <ul class="internship-list">
+      <li>Designing a heated line-trace system for gas hoses and tubing to prevent gas condensation during transit — sizing heating elements, insulation, and temperature sensors for uniform heat distribution and thermal stability.</li>
+      <li>Designed and built a wet-displacement calibration setup for low-flow gas Mass Flow Controllers (MFCs), performing mathematical and physical corrections (hydrostatic head, vapor pressure, ambient conditions) in SMath Studio and MATLAB to map accurate calibration curves.</li>
+      <li>Designed a custom low-dead-volume ammonia (NH3) sensor manifold in CAD (SolidWorks/Fusion), SLA 3D printed for chemical compatibility — with O-ring grooves and sealing interfaces achieving zero leakage, plus custom mounting brackets for testbench integration.</li>
+      <li>Overhauled and redesigned the PhAGE (Photocatalyst Alternative Gas Equipment) testbench layout: replaced pressure sensors, rerouted pneumatic lines, and ran bubble-leak and pressure-decay tests to safely recommission the equipment.</li>
+    </ul>
+    <div class="tag-list internship-tags">
+      <span class="tag accent">SolidWorks</span>
+      <span class="tag accent">MATLAB</span>
+      <span class="tag">Autodesk Fusion</span>
+      <span class="tag">SMath Studio</span>
+      <span class="tag">SLA 3D Printing</span>
+      <span class="tag">Calibration &amp; Metrology</span>
+      <span class="tag">Thermal System Design</span>
+      <span class="tag">Pneumatics &amp; Leak Testing</span>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
 <!-- PROJECTS -->
 <section id="projects">
-  <span class="section-label">02 — SELECTED WORK</span>
+  <span class="section-label">03 — SELECTED WORK</span>
   <h2>PROJECTS</h2>
   <div class="project-list">
 
@@ -640,7 +708,7 @@
 
 <!-- SKILLS -->
 <section id="skills">
-  <span class="section-label">03 — TOOLS &amp; EXPERTISE</span>
+  <span class="section-label">04 — TOOLS &amp; EXPERTISE</span>
   <h2>SKILLS</h2>
   <div class="skills-grid">
     <div class="skill-block fade-up">
@@ -712,7 +780,7 @@
 
 <!-- BACKGROUND -->
 <section id="background">
-  <span class="section-label">04 — EXPERIENCE &amp; EDUCATION</span>
+  <span class="section-label">05 — EXPERIENCE &amp; EDUCATION</span>
   <h2>BACKGROUND</h2>
   <div class="timeline">
     <div class="timeline-item fade-up">
@@ -720,7 +788,7 @@
       <div>
         <div class="timeline-role">R&amp;D Mechanical Engineering Intern</div>
         <div class="timeline-org">INNOFLEX B.V. — EINDHOVEN, NL</div>
-        <div class="timeline-desc">Full-time, 6-month R&amp;D placement at the Brainport Industries Campus. Designing a heated line-trace system for gas hoses, building a wet-displacement calibration setup for low-flow gas MFCs, and engineering a custom ammonia-compatible sensor manifold — plus overhauling pneumatics and instrumentation on the PhAGE test bench.</div>
+        <div class="timeline-desc">Full-time, 6-month R&amp;D placement at the Brainport Industries Campus — see the Internship section above for what I'm working on.</div>
       </div>
     </div>
     <div class="timeline-item fade-up">
@@ -772,7 +840,7 @@
 <div id="contact">
   <div class="contact-inner">
     <div class="fade-up">
-      <span class="section-label">05 — LET'S WORK TOGETHER</span>
+      <span class="section-label">06 — LET'S WORK TOGETHER</span>
       <div class="contact-heading">GET IN<br>TOUCH<span>.</span></div>
       <div style="margin-top:1.5rem; display:flex; gap:1rem; flex-wrap:wrap;">
         <a id="cSend" href="#" class="btn btn-primary">Send a Message</a>
